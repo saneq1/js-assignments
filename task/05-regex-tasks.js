@@ -31,6 +31,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
+   return /\{[A-F0-9]{8}-([A-F0-9]{4}-){3}[A-F0-9]{12}\}/i;
    throw new Error('Not implemented');
 }
 

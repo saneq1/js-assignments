@@ -30,6 +30,11 @@
  *
  */
 function getFizzBuzz(num) {
+    let mess=(num%3==0&&num%5==0)?"FizzBuzz":
+  (num%3==0)?"Fizz":
+  (num%5==0)?"Buzz":
+   num;
+   return mess;
     throw new Error('Not implemented');
 }
 
@@ -46,6 +51,9 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
+    while(n!=1)
+   {return n*getFactorial(n-1)
+  }return n
     throw new Error('Not implemented');
 }
 
@@ -63,6 +71,13 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
+    let count=0;
+  for (let i = n1; i <= n2; i++) {
+    i;//?
+   count=count+i
+    
+  }return count;
+
     throw new Error('Not implemented');
 }
 
@@ -82,6 +97,7 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
+    return a + b > c && a + c > b && b + c > a;
     throw new Error('Not implemented');
 }
 
@@ -150,6 +166,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
+    return Math.sqrt (Math.pow (circle.center.x-point.x,2)+Math.pow (circle.center.y-point.y,2)) < circle.radius;
     throw new Error('Not implemented');
 }
 
@@ -166,6 +183,12 @@ function isInsideCircle(circle, point) {
  *   'entente' => null
  */
 function findFirstSingleChar(str) {
+    str.split('');//?
+for(var i=0;i<str.length;i++)
+    {if(str.indexOf(str[i])==str.lastIndexOf(str[i]))
+    return str[i];
+    }
+    return null;
     throw new Error('Not implemented');
 }
 
@@ -209,6 +232,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
+    return str.split('').reverse().join('')
     throw new Error('Not implemented');
 }
 
@@ -226,6 +250,8 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
+    let str =  num.toString();
+return str.split('').reverse().join('')
     throw new Error('Not implemented');
 }
 
@@ -270,6 +296,12 @@ function isCreditCardNumber(ccn) {
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
 function getDigitalRoot(num) {
+    let str =  num.toString().split('');//?
+if (str.length > 1){
+  return getDigitalRoot(str.reduce((prev, cur)=> +prev + +cur));
+} else {
+  return num;
+}
     throw new Error('Not implemented');
 }
 
@@ -356,6 +388,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
+    return num.toString(n);
     throw new Error('Not implemented');
 }
 
