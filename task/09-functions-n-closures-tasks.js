@@ -26,6 +26,7 @@
  *
  */
 function getComposition(f,g) {
+    return function(x){return f(g(x))}
     throw new Error('Not implemented');
 }
 
@@ -47,6 +48,7 @@ function getComposition(f,g) {
  *
  */
 function getPowerFunction(exponent) {
+    return function(x){return Math.pow(x,exponent)}
     throw new Error('Not implemented');
 }
 
